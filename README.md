@@ -7,7 +7,10 @@ Então é requirido a multiplicação:
 que será executado nos TensorCores respeitando a equação: `D = alpha * (A x B) + beta * (A x B)`.
 Após a multiplicação é copiado as matrizes resultantes D e E da memória do Device para o Host e exibido o resultado na tela.
 
-**OBS:** a execução nos TensorCores não são garantidas, pois o hardware que define se é vantajoso ou não utiliza-los. Porém quanto maior a ordem das matrizes maior será a chance.
+**OBS:**
+* A execução nos TensorCores não são garantidas, pois o hardware que define se é vantajoso ou não utiliza-los. Porém quanto maior a ordem das matrizes maior será a chance.
+* O lançamento das threads não estão sendo balanceados, pois utilizei matrizes pequenas para os testes.
+  
 ## Requisistos
 * CUDA 9.1 ou superior
 * CUDA ToolKit
